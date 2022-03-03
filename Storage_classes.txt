@@ -1,0 +1,151 @@
+
+/*Program demonstrating auto storage class*/
+
+
+#include <stdio.h>
+ 
+ 
+void autoStorageClass()
+{
+ 
+    printf("\nDemonstrating auto class\n\n");
+ 
+    // declaring an auto variable 
+    auto int a = 32;
+ 
+    // printing the auto variable 'a'
+    printf("Value of the variable 'a'  declared as auto: %d\n", a);
+ 
+}
+ 
+
+int main()
+{
+ 
+    printf("Program to demonstrate"
+           " Storage Classes in C\n\n");
+ 
+    // To demonstrate auto Storage Class
+    autoStorageClass();
+ 
+ return 0;
+}
+
+/*output*/
+
+Program to demonstrate Storage Classes in C
+
+
+Demonstrating auto class
+
+Value of the variable 'a'  declared as auto: 32
+
+
+  
+
+/*Register */
+
+
+#include <stdio.h> //Header file
+
+int main()
+
+{
+
+register int i = 10;
+
+int *p = &i; //error: address of register variable requested
+
+printf("Value of i: %d", *p);
+
+printf("Address of i: %ls", p);
+
+return 0;
+}
+
+ 
+/*Output*/
+main.c:16:1: error: address of register variable ‘i’ requested
+   16 | int *p = &i; //error: address of register variable requested
+      | ^~~
+
+
+
+/*Static*/
+#include <stdio.h>
+
+void staticDemo()
+
+{
+
+ static int i;  //declaring static
+
+{
+
+ static int i = 1;//declaring static
+
+  printf(" \n %d", i);
+
+i++; //Incrementing the values
+
+}
+
+  printf("%d", i);
+
+  i++;
+
+}
+
+int main()
+
+{
+
+  staticDemo();
+
+  staticDemo();
+
+}
+
+/*Output*/
+10
+21
+
+/*Extern*/
+
+
+#include <stdio.h>
+int x;
+void externStorageClass()
+{
+ 
+    printf("\nDemonstrating extern class\n\n");
+ 
+    // telling the compiler that the variable
+    // x is an extern variable and has been
+    // defined elsewhere (above the main
+    // function)
+    extern int x;
+ 
+    // printing the extern variables 'x'
+    printf("Value of the variable 'x' declared as extern: %d \n", x);
+ 
+    // value of extern variable x modified
+    x = 2;
+ 
+    // printing the modified values of
+    // extern variables 'x'
+    printf("Modified value of the variable 'x' declared as extern: %d\n",x);
+
+}
+int main()
+{
+    externStorageClass();
+    return 0;
+}
+
+/*output*/
+
+Demonstrating extern class
+
+Value of the variable 'x' declared as extern: 0 
+Modified value of the variable 'x' declared as extern: 2
