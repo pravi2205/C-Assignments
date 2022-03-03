@@ -1,0 +1,62 @@
+
+/*program to explain all data types including signed and unsigned*/
+
+#include <stdio.h>
+int main()
+{
+	int a = 1;
+	char b = 'P';
+	double c = 3.14;
+
+	// printing the variables defined
+	// above along with their sizes
+	printf("character.Value is %c and "
+		"size is %lu byte.\n",
+		b, sizeof(char));
+	//  use sizeof(b)
+
+	printf("integer.Value is %d and "
+		"size is %lu bytes.\n",
+		a, sizeof(int));
+	// use sizeof(a)
+
+	printf("double floating point variable."
+		" Value is %lf and size is %lu bytes.\n",
+		c, sizeof(double));
+	//  use sizeof(c)
+
+	return 0;
+}
+
+
+/*output*/
+character.Value is P and size is % byte.
+integer.Value is 1 and size is 4 bytes.
+double floating point variable. Value is 3.140000 and size is 8 bytes
+
+/*errorsain.c:18:9: warning: unknown conversion type character ‘ ’ in format [-Wformat=]
+   18 |  printf("character.Value is %c and "
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c:19:14: note: format string is defined here
+   19 |   "size is %l byte.\n",
+      |              ^
+main.c:18:9: warning: too many arguments for format [-Wformat-extra-args]
+   18 |  printf("character.Value is %c and "
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c:32:49: error: ‘UINT_MAX’ undeclared (first use in this function)
+   32 |   printf("UINT_MAX    :   %u\n", (unsigned int) UINT_MAX);
+      |                                                 ^~~~~~~~
+main.c:10:1: note: ‘UINT_MAX’ is defined in header ‘’; did you forget to ‘#include ’?
+    9 | #include <stdio.h>
+  +++ |+#include <limits.h>
+   10 | int main()
+main.c:32:49: note: each undeclared identifier is reported only once for each function it appears in
+   32 |   printf("UINT_MAX    :   %u\n", (unsigned int) UINT_MAX);
+      |                                                 ^~~~~~~~
+main.c:33:53: error: ‘ULONG_MAX’ undeclared (first use in this function)
+   33 |     printf("ULONG_MAX   :   %lu\n", (unsigned long) ULONG_MAX);
+      |                                                     ^~~~~~~~~
+main.c:33:53: note: ‘ULONG_MAX’ is defined in header ‘’; did you forget to ‘#include ’?
+main.c:34:53: error: ‘USHRT_MAX’ undeclared (first use in this function)
+   34 |     printf("USHRT_MAX   :   %d\n", (unsigned short) USHRT_MAX);
+
