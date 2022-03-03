@@ -1,0 +1,48 @@
+
+/*Program to explain all operators using different data types*/
+
+#include<stdio.h>  //Header file
+int main()
+{
+int a=10, b=7;   //Initialising int variables
+float c=5.4, d=6.8;  //Initialising float variables
+
+//Printing various values
+printf("The Addition of %d and %d is: %d\n",a,b,a+b);
+printf("The Subtraction of %d and %d is: %d\n",a,b,a-b);
+printf("The Multiplication of %d and %d is: %d\n",a,b,a*b);
+printf("The Division of %d and %d is: %d\n",a,b,a/b);
+printf("The Modulus operation of %d and %d is: %d\n",a,b,a%b);
+printf("The Incremented value ++a is: %d\n",++a);
+printf("The Decremented value --b is: %d\n",--b);
+printf("The Addition of %f and %f is: %f\n",c,d,c+d);
+printf("The Subtraction of %f and %f is: %f\n",c,d,c-d);
+printf("The Multiplication of %f and %f is: %f\n",c,d,c*d);
+printf("The Division of %f and %f is: %f\n",c,d,c/d);
+printf("The Modulus operation of %f and %f is: %f\n",c,d,c%d);
+printf("The Incremented value ++c is: %f\n",++c);
+printf("The Decremented value --d is: %f\n",--d);
+
+return 0;
+}
+
+
+/*output*/
+The Addition of 10 and 7 is: 17
+The Subtraction of 10 and 7 is: 3
+The Multiplication of 10 and 7 is: 70
+The Division of 10 and 7 is: 1
+The Modulus operation of 10 and 7 is: 3
+The Incremented value ++a is: 11
+The Decremented value --b is: 6
+The Addition of 5.400000 and 6.800000 is: 12.200001
+The Subtraction of 5.400000 and 6.800000 is: -1.400000
+The Multiplication of 5.400000 and 6.800000 is: 36.720001
+The Division of 5.400000 and 6.800000 is: 0.794118
+The Incremented value ++c is: 6.400000
+The Decremented value --d is: 5.800000
+
+/*errors*/
+
+main.c:25:59: error: invalid operands to binary % (have ‘float’ and ‘float’)
+   25 | printf("The Modulus operation of %f and %f is: %f\n",c,d,c%d);

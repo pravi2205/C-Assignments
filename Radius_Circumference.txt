@@ -1,0 +1,46 @@
+/*Program to find the area and circumference of a a circle*/
+
+#include <stdio.h>  //Header file inclusion for printf function
+
+int main()        //Main
+{
+int r;            //Variable declaration to hold radius
+float pi= 3.14;   //Variable declaration t hold PI value
+double cir,area;  //Variable declaration to hold circumference and area of the circle
+
+printf("\nEnter radius of circle: "); //Taking input from user
+scanf("%d", &r);                      //Reading the input
+
+area = pi * r * r;                    //Calculating the area
+printf("\nArea of circle : %f ", area); //Printing the area
+
+cir = 2 * pi * r;                      //Calculate the circumference
+printf("\nCircumference : %f ", cir);  //Print the circumference
+
+return 0;
+
+
+/*Output*/
+Enter the radius of circle:5
+
+Area of circle:78.500000
+Circumference :31.400002
+
+/*errors
+main.c:21:18: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘double’ [-Wformat=]
+   21 | printf("\nArea: %d ", area);
+      |                 ~^    ~~~~
+      |                  |    |
+      |                  int  double
+      |                 %f
+main.c:24:28: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘double’ [-Wformat=]
+   24 | printf("\nCircumference : %d", cir);
+      |                           ~^   ~~~
+      |                            |   |
+      |                            int double
+      |                           %f
+
+Enter radius of circle: ^C
+
+...Program finished with exit code 0
+Press ENTER to exit console.
