@@ -1,0 +1,30 @@
+
+ /*Program printing  addition or subtraction using switch case*/
+#include <stdio.h>
+
+int main()
+{
+    double c,d;   //Reading two numbers
+    int n,a,s;
+    printf("enter two integer:");
+    scanf("%lf %lf",&c,&d);
+    printf("enter 1 or 2:");
+    scanf("%d",&n);
+    switch(n)
+    {
+        case 1:printf("sum is:%lf",c+d);
+            break;
+        case 2:printf("sub is : %lf",c-d);
+            break;
+        default:printf("no action");
+            break;
+    }
+
+    return 0;
+}
+
+
+/*output*/
+enter two integer:3 4
+enter 1 or 2:2
+sub is : -1.000000
