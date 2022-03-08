@@ -1,0 +1,57 @@
+
+/*break and continue*/
+/*Program using break and continue*/
+#include <stdio.h>
+
+int main()
+{
+    int i,num;
+    int sum=0;
+    for(i=1;i<=10;i++)
+    {
+    printf("enter any number : ");
+    scanf("%d",&num);
+    {
+        
+    if(num<0)
+    {
+        break;
+    }
+    else
+    {
+        sum=sum+num;
+    }
+    printf("sum is %d :\n",sum);
+    }
+    }
+    printf("%d",sum);
+    
+
+    return 0;
+}
+
+
+/*Output*/
+
+enter any number : 3
+sum is 3 :
+enter any number : 4
+
+sum is 7 :
+enter any number : 5
+sum is 12 :
+enter any number : 6
+sum is 18 :
+enter any number : 7
+sum is 25 :
+enter any number : 9
+sum is 34 :
+enter any number : 2
+sum is 36 :
+enter any number : 0
+sum is 36 :
+enter any number : 9
+sum is 45 :
+enter any number : 8
+sum is 53 :
+53
